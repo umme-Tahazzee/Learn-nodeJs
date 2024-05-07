@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Area Calculator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-top: 50px;
+    }
+    input[type="number"] {
+        width: 100%;
+        padding: 8px;
+        margin: 5px 0;
+        box-sizing: border-box;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+</style>
+</head>
+<body>
+    <!-- navbar -->
+      <header>
+           <nav>
+               <ul>
+                   <li><a href="/circle">Circle Calculator</a></li>
+                   <li><a href="/triangle">Triangle Calculator</a></li>
+
+               </ul>
+           </nav>
+      </header>
+   <!-- container -->
+<div class="container">
+    <h2>Rectangle Area Calculator</h2>
+    <form action="#" method="POST">
+    <label for="length">Length:</label>
+    <input type="number" id="length" placeholder="Enter length">
+    <label for="width">Width:</label>
+    <input type="number" id="width" placeholder="Enter width">
+    <button onclick="calculateArea()">Calculate Area</button>
+    <p id="result"></p>
+</form>
+</div>
+
+<!-- script -->
+<script>
+    function calculateArea() {
+        var length = parseFloat(document.getElementById('length').value);
+        var width = parseFloat(document.getElementById('width').value);
+        var area = length * width;
+        document.getElementById('result').innerText = "Area: " + area;
+    }
+</script>
+
+</body>
+</html>
